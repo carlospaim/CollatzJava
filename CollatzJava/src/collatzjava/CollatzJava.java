@@ -13,11 +13,10 @@ public class CollatzJava {
         while (x > 1) {
             if ((x % 2) > 0) {
                 x = x * 3 + 1;
-                i++;
             } else {
                 x = x / 2;
-                i++;
             }
+            i++;
         }
         System.out.println(i);
     }
