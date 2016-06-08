@@ -9,15 +9,17 @@ public class CollatzJava {
         System.out.println("Please enter your number: ");
         int x = input.nextInt();
         int i = 0;
+        System.out.println("It takes " + solve(i) + " steps to reach 1 using the Collatz Conjecture");
 
-        while (x > 1) {
-            if ((x % 2) == 0) {
-                x = x / 2;
-            } else {
-                x = x * 3 + 1;
-            }
-            i++;
-        }
-        System.out.println(i);
+
+    public static int solve(int n) {
+	    	if (i == 1) {
+		    	return 0; 
+		    } else if (i % 2 == 0) {
+			return 1 + solve(n / 2);
+		    } else {
+		    	return 1 + solve(i * 3 + 1);
+		    }	 	
+
     }
 }
